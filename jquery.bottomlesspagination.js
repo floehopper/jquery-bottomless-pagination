@@ -6,11 +6,12 @@
       ajaxLoaderPath:'../images/ajax-loader.gif',
       results:'.results',
       objName:'',
-      callback:null
+      callback:null,
+      paginationSelector:''
     },callerSettings||{});
     settings.imgLoader = new Image();
     settings.imgLoader.src = settings.ajaxLoaderPath;
-    settings.href = $(".current").next().attr("href");
+    settings.href = $(settings.paginationSelector + " .pagination .current").next().attr("href");
   	
     if ($('div.pagination').size() > 0){
       $('div.pagination').wrap("<div class='pagination_links'></div>").hide();
