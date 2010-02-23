@@ -29,10 +29,10 @@
       $.get(
         settings.href,'',function(data){
           $(settings.results).addrows(data);
+          $(".now_loading").hide();
+          $(".more_links").show();
         }
       );
-      $(".now_loading").hide();
-      $(".more_links").show();
       return false;
     });
     
